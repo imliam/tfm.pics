@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index')->name('home.index');
+Route::get('/create', 'ImageController@create')->name('images.create');
+Route::get('/{type}', 'ImageController@index')->name('images.index');
